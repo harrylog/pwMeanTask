@@ -1,0 +1,12 @@
+<div>Planet Watchers Assignment</div>
+<button type="button" class="btn btn-primary" (click)="showImage()">
+  Show Image
+</button>
+
+<app-single-satellite
+  *ngFor="let satellite of satellitesData"
+  [satImg]="satellite['image']"
+  (newState)="onNewState($event)"
+  [id]="satellite['ind']"
+></app-single-satellite>
+
